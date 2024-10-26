@@ -29,13 +29,7 @@ const upload = multer({
 });
 
 app.use(express.static('uploads'));
-app.use(cors({ credentials: true, origin: 'http://localhost:3000' }
-             {
-             origin:["http://deploy-mern-1whq.vercel.app"],
-               methods:["POST","GET","PUT","DELETE"],
-               credentials:true
-             }
-            ));
+app.use(cors());
 app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads', express.static('uploads'));
